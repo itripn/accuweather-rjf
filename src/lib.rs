@@ -183,6 +183,7 @@ impl Accuweather {
                 ("language", self.language.clone()),
             ],
         )?;
+        // println!("{:?}", url);
         match self.client.get(url).send()?.error_for_status()?.json() {
             Ok(x) => Ok(x),
             Err(x) => Err(x.into()),

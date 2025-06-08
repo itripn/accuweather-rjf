@@ -163,10 +163,10 @@ pub struct Headline {
     pub effective_epoch_date: i64,
     pub severity: i32,
     pub text: String,
-    pub category: String,
-    pub end_date: String,
-    pub end_epoch_date: i64,
-    pub mobile_link: String,
+    pub category: Option<String>,
+    pub end_date: Option<String>,
+    pub end_epoch_date: Option<i64>,
+    pub mobile_link: Option<String>,
     pub link: String,
 }
 
